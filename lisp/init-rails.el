@@ -1,10 +1,11 @@
+;;; init-rails.el --- Ruby on Rails support -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (when (maybe-require-package 'projectile-rails)
-  (after-load 'projectile
-    (add-hook 'projectile-mode-hook 'projectile-rails-on)
-    (after-load 'guide-key
-      (add-to-list 'guide-key/guide-key-sequence "C-c r")
-      (add-to-list 'guide-key/guide-key-sequence "C-c r !")
-      (add-to-list 'guide-key/guide-key-sequence "C-c r g"))))
+  (add-hook 'projectile-mode-hook
+            (lambda () (projectile-rails-global-mode projectile-mode))))
 
 
 (provide 'init-rails)
+;;; init-rails.el ends here
