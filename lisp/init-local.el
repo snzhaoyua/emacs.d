@@ -37,8 +37,8 @@
   (interactive "p")
   (move-line (if (null n) 1 n)))
 
-(bind-key* "M-S-<up>" 'move-line-up)
-(bind-key* "M-S-<down>" 'move-line-down)
+;;(bind-key* "M-S-<up>" 'move-line-up)
+;;(bind-key* "M-S-<down>" 'move-line-down)
 ;;----------------------------------------------------------------------------
 ;;avy 随意跳
 ;;----------------------------------------------------------------------------
@@ -62,7 +62,7 @@
 
 ;; comment/uncomment code
 ;;(require 'bind-key)
-(bind-key* "M-;" 'comment-line)
+;;(bind-key* "M-;" 'comment-line)
 ;;(global-set-key (kbd "C-c C-c") 'comment-line)
 ;;----------------------------------------------------------------------------
 ;; 跳转成对的括号
