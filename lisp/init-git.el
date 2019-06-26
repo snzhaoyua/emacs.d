@@ -41,7 +41,7 @@
   (define-key magit-status-mode-map (kbd "C-M-<up>") 'magit-section-up)
   (add-hook 'magit-popup-mode-hook 'sanityinc/no-trailing-whitespace))
 
-(maybe-require-package 'magit-todos)
+  ;; (maybe-require-package 'magit-todos)
 
 (require-package 'fullframe)
 (after-load 'magit

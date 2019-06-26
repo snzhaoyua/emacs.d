@@ -44,14 +44,14 @@
   (unless (and (boundp 'org-ditaa-jar-path)
                (file-exists-p org-ditaa-jar-path))
     (let ((jar-name "ditaa0_9.jar")
-          (url "http://jaist.dl.sourceforge.net/project/ditaa/ditaa/0.9/ditaa0_9.zip"))
+          (url "~/.emacs.d/lisp/ditaa0_9.jar"))
       (setq org-ditaa-jar-path (expand-file-name jar-name (file-name-directory user-init-file)))
       (unless (file-exists-p org-ditaa-jar-path)
         (sanityinc/grab-ditaa url jar-name)))))
 
 (after-load 'ob-plantuml
   (let ((jar-name "plantuml.jar")
-        (url "http://jaist.dl.sourceforge.net/project/plantuml/plantuml.jar"))
+        (url "~/.emacs.d/plantuml.jar"))
     (setq org-plantuml-jar-path (expand-file-name jar-name (file-name-directory user-init-file)))
     (unless (file-exists-p org-plantuml-jar-path)
       (url-copy-file url org-plantuml-jar-path))))
